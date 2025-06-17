@@ -56,6 +56,6 @@
 <h3>📎 About:</h3>
 
 **Haidut Collected Works**  
-*A Comprehensive Collection of Forum Posts, Replies, and Articles*
+*A Comprehensive Collection of Forum Posts, Replies, and Articles.*
 
 This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, replies, and articles.
