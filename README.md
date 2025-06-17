@@ -1,7 +1,7 @@
 # Haidut Collected Works
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6cd47276-b566-489a-b393-a86b8bcc434a" width="270" height="420" alt="Book Cover">
+  <img src="https://github.com/user-attachments/assets/fd19f90e-24fe-4727-9c3e-96ee7f7a6d87" width="270" height="420" alt="Book Cover">
   
   <br>
   <br>
