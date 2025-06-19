@@ -58,7 +58,7 @@
 **Haidut Collected Works**  
 *A Comprehensive Collection of Haidut's Forum Posts, Replies, and Articles.*
 
-This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on the Ray Peat Forum from 2013 to 2024. Each article presented includes the main content, as well as the replies to which Haidut responded, any included or referenced figures, and the references. The articles are compiled on a yearly basis, and there are twelve volumes in total.
+This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on the Ray Peat Forum from 2013 to 2024. Each article presented includes the main content, as well as the replies to which Haidut responded, any included or cited figures, and the references. The articles are compiled on a yearly basis, and there are twelve volumes in total.
 
 <h3>📏 Improvements:</h3>
 
