@@ -59,3 +59,31 @@
 *A Comprehensive Collection of Forum Posts, Replies, and Articles.*
 
 This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, replies, and articles.
+
+
+<h3>🧮 Project Structure:</h3>
+
+```
+.
+├── Scripts/                      # Utility Scripts
+│   └── remove_blank_pages.py     # Extra Blank Page Removal Utility
+│
+├── Common/                       # Shared Resources
+│   ├── Fonts/                    # Fonts
+│   │   ├── Open_Sans/            # Open Sans Font Family
+│   │   │   └── *.ttf             # Regular, Bold, Italic, Light, Medium, etc.
+│   │   └── EB_Garamond/          # EB Garamond Font Family
+│   │       └── *.ttf             # Regular, Bold, Italic, Medium, etc.
+│   ├── Tufte-Book.cls            # Tufte-Style Book Class
+│   └── Tufte-Common.def          # Class Definitions
+│
+└── Years/                        # Posts Sorted by Year
+    └── [YEAR]/                   # Year Folder
+        ├── Articles/             # Articles
+        │   └── [TITLE].tex       # Article TeX File
+        ├── Images/               # Images
+        │   └── [TITLE].[NUM].jpg # Image Named After Article
+        ├── Cover.tex             # Cover
+        ├── [YEAR].tex            # Main TeX File
+        └── Bibliography.bib      # Bibliography
+```
