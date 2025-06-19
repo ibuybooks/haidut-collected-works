@@ -133,5 +133,5 @@ lualatex [YEAR]
 pip3 install pymupdf
 
 # Remove blank pages:
-python3 Scripts/remove_blank_pages.py [YEAR].pdf
+python3 Scripts/Remove_Blank_Pages.py Years/[YEAR]/[YEAR].pdf
 ```
