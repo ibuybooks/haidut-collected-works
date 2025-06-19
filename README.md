@@ -27,7 +27,7 @@
 >[!NOTE]
 > **MEDICAL ADVICE DISCLAIMER**
 > 
-> The information contained in this repository is for educational and informational purposes only and is not intended as medical advice. You should not rely on this information to make decisions about your health or medical treatment. The author is not responsible for any use or misuse of this material.
+> The information contained in this repository is for educational and informational purposes only and is not intended as medical advice. You should not rely on this information to make decisions about your health or medical treatment. The author is not responsible for any use or misuse of this content.
 
 <br>
 
@@ -51,15 +51,31 @@
 >[!CAUTION]
 > **CONTENT ACCURACY NOTICE**
 > 
-> This repository contains content that has been automatically parsed from scraped web data. While care has been taken to verify accuracy and quality of the data, manual verification of all content is not possible. Please exercise caution when using or referencing this material. The author is not responsible for any use or misuse of this material.
+> This repository contains content that has been automatically parsed from scraped web data. While care has been taken to manually verify the accuracy and quality of the data, verification of all content is not possible. Please exercise caution when using or referencing this content. The author is not responsible for any use or misuse of this content.
 
 <h3>📎 About:</h3>
 
 **Haidut Collected Works**  
-*A Comprehensive Collection of Forum Posts, Replies, and Articles.*
+*A Comprehensive Collection of Haidut's Forum Posts, Replies, and Articles.*
 
 This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, replies, and articles.
 
+<h3>📏 Improvements:</h3>
+
+- Removed duplicate replies, quotes, and text.
+- Anonymized usernames.
+- URLs and references are converted into a proper citations.
+- Implimented proper scientific notation (e.x., CO2 -> CO<sub>2</sub>).
+- Standarized capitalizations (e.x., "dna" -> "DNA").
+- Corrected spelling, grammar, and capitalizations.
+- Implimented proper fancy quotes (using `csquotes`)
+- Removed formatting (**bold**, *italics*, <ins>underline</ins>, etc.)
+- And more!
+
+<h3>🔖 Notes:</h3>
+
+- Standard 8.5"x11" paper size.
+- 12 volumes, 2013-2024.
 
 <h3>🧮 Project Structure:</h3>
 
@@ -87,3 +103,9 @@ This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, rep
         ├── [YEAR].tex            # Main TeX File
         └── Bibliography.bib      # Bibliography
 ```
+
+<div align="center">
+  <h2>⚒️ Building from Source</h2>
+</div>
+
+<h3>📄 Instructions:</h3>
