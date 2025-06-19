@@ -33,15 +33,15 @@
 
 <div align="center">
   <h2>⚡ Quick Start</h2>
-  <h3>Download Latest Release</h3>
-  <p>Download the Latest Pre-Built PDF Release</p>
+  <h3>Download the Latest Release</h3>
+  <p>Download the Latest PDFs</p>
   
   [![Download][Download-Badge]][Download-Link]
 
   [Download-Badge]: https://img.shields.io/badge/Download_Latest_Release-2563eb?style=for-the-badge&logo=github&logoColor=white&labelColor=1e40af
   [Download-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/latest/
   
-  <sup>📖 See README for More Information</sup>
+  <sup>📖 View the README for more information.</sup>
 </div>
 
 <div align="center">
