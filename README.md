@@ -82,7 +82,7 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 ```
 .
 ├── Scripts/                      # Utility Scripts
-│   └── remove_blank_pages.py     # Extra Blank Page Removal Utility
+│   └── Remove_Blank_Pages.py     # Extra Blank Page Removal Utility
 │
 ├── Common/                       # Shared Resources
 │   ├── Fonts/                    # Fonts
