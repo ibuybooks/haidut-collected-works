@@ -68,8 +68,8 @@ This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, rep
 - Implimented proper scientific notation (e.x., CO2 -> CO<sub>2</sub>).
 - Standarized capitalizations (e.x., "dna" -> "DNA").
 - Corrected spelling, grammar, and capitalizations.
-- Implimented proper fancy quotes (using `csquotes`)
-- Removed formatting (**bold**, *italics*, <ins>underline</ins>, etc.)
+- Implimented proper fancy quotes (using csquotes)
+- Removed formatting (bold, italics, underline, etc.)
 - And more!
 
 <h3>🔖 Notes:</h3>
