@@ -96,7 +96,7 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 └── Years/                        # Posts Sorted by Year
     └── [YEAR]/                   # Year Folder
         ├── Articles/             # Articles
-        │   └── [TITLE].tex       # Article TeX File
+        │   └── Articles.zip      # Article TeX Files (Compressed for GitHub)
         ├── Images/               # Images
         │   └── [TITLE].[NUM].jpg # Image Named After Article
         ├── Cover.tex             # Cover
@@ -113,6 +113,9 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 ```bash
 # Clone the repository:
 git clone https://github.com/ibuybooks/haidut-collected-works.git
+
+# Un-zip the articles:
+unzip Years/[YEAR]/Articles/Articles.zip -d Years/[YEAR]/Articles/
 
 # Install required packages:
 tlmgr install babel babel-english csquotes microtype fontspec xparse lua-ul graphicx adjustbox xurl extdash hyperref fancyhdr changepage makeidx titlesec tcolorbox chemfig luacode tikz chngcntr etoolbox truncate biblatex biber tufte-latex collection-fontsrecommended collection-latexrecommended
