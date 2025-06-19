@@ -58,7 +58,7 @@
 **Haidut Collected Works**  
 *A Comprehensive Collection of Haidut's Forum Posts, Replies, and Articles.*
 
-This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, replies, and articles.
+This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on the Ray Peat Forum from 2013 to 2024. Each article presented includes the main content, as well as the replies to which Haidut responded, any included or referenced figures, and the references. The articles are compiled on a yearly basis, and there are twelve volumes in total.
 
 <h3>📏 Improvements:</h3>
 
@@ -68,8 +68,9 @@ This project is a high-quality LuaLaTeX compilation of Haidut's forum posts, rep
 - Implimented proper scientific notation (e.x., CO2 -> CO<sub>2</sub>).
 - Standarized capitalizations (e.x., "dna" -> "DNA").
 - Corrected spelling, grammar, and capitalizations.
-- Implimented proper fancy quotes (using csquotes)
-- Removed formatting (bold, italics, underline, etc.)
+- Implimented proper fancy quotes (using csquotes).
+- Removed formatting (bold, italics, underline, color).
+- Removed irrelevant replies ("Thanks," etc.)
 - And more!
 
 <h3>🔖 Notes:</h3>
