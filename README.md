@@ -127,7 +127,7 @@ biber [YEAR]
 lualatex [YEAR]
 lualatex [YEAR]
 
-# Optional (recommended) remove extra blank pages:
+# (Optional) remove extra blank pages (recommended):
 # Install required packages:
 pip3 install pymupdf
 
