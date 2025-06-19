@@ -51,8 +51,7 @@
 >[!CAUTION]
 > **CONTENT ACCURACY NOTICE**
 > 
-> This repository contains content that has been automatically parsed from scraped web data. While care has been taken to manually verify the accuracy and quality of the data, verification of all content is not possible. Please exercise caution when using or referencing this content. The author is not responsible for any use or misuse of this content.
-
+> This repository contains content that has been automatically parsed from scraped web data. While care has been taken to manually verify the accuracy and quality of the data, verification of all content is not possible. Please exercise caution when using or referencing anything contained within this content.
 <h3>📎 About:</h3>
 
 **Haidut Collected Works**  
