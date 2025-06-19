@@ -110,3 +110,28 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 </div>
 
 <h3>📄 Instructions:</h3>
+
+```bash
+# Clone the repository:
+git clone https://github.com/ibuybooks/haidut-collected-works.git
+
+# Install required packages:
+tlmgr install babel babel-english csquotes microtype fontspec xparse lua-ul graphicx adjustbox xurl extdash hyperref fancyhdr changepage makeidx titlesec tcolorbox chemfig luacode tikz chngcntr etoolbox truncate biblatex biber tufte-latex collection-fontsrecommended collection-latexrecommended
+
+# Compile the document:
+lualatex [YEAR].tex
+
+# Process the bibliography
+biber [YEAR]
+
+# Compile the document with the bibliograpy:
+lualatex [YEAR]
+lualatex [YEAR]
+
+# Optional (recommended) remove extra blank pages:
+# Install required packages:
+pip3 install pymupdf
+
+# Remove blank pages:
+python3 Scripts/remove_blank_pages.py [YEAR].pdf
+```
