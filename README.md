@@ -86,7 +86,7 @@
   [2023-Badge]: https://img.shields.io/badge/2023-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2023-Link]: #
   [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2024-Link]: #
+  [2024-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/tag/2024
   
   <sup>📖 View the README for more information.</sup>
 </div>
