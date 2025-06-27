@@ -34,6 +34,7 @@
 <div align="center">
   <h2>⚡ Quick Start</h2>
   <h3>Download Complete Collection</h3>
+  <p>Includes All Years from 2013-2024.</p>
   
   ~~[![Download Master][Master-Badge]][Master-Link]~~
 
@@ -41,7 +42,7 @@
   [Master-Link]: #
   
   <h3>Download Individual Volumes</h3>
-  <p>Choose specific years from the collection below:</p>
+  <p>Select a Volume by Year.</p>
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 800px; margin: 0 auto;">
     
