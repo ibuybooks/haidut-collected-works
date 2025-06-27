@@ -123,3 +123,43 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 
 - Standard 8.5"x11" paper size.
 - 12 volumes, 2013-2024.
+
+<div align="center">
+  <h2>🛠️ Build Instructions</h2>
+</div>
+
+<h3>🔧 Required LaTeX Packages</h3>
+
+The following packages are required and should be installed through your LaTeX distribution's package manager:
+
+```bash
+babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox
+xurl, extdash, hyperref, fancyhdr, changepage, makeidx, titlesec, tcolorbox
+chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex
+tufte-latex
+```
+
+<h3>🏗️ Compilation Process</h3>
+
+>[!NOTE]
+> **ARGUMENT REQUIRED**
+> 
+> The compilation requires a year argument between 2013-2024. This determines which volume to build.
+
+```bash
+# Initial LaTeX Compilation
+lualatex HaidutCollectedWorks [YEAR]
+
+# Process the Bibliography
+biber HaidutCollectedWorks
+
+# Generate Index
+makeindex HaidutCollectedWorks
+
+# Final LaTeX Compilation
+lualatex HaidutCollectedWorks [YEAR]
+lualatex HaidutCollectedWorks [YEAR]
+
+# Remove Blank Pages and Rebuild Index
+python3 Scripts/Remove_Blank_Pages.py HaidutCollectedWorks.pdf
+```
