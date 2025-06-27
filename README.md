@@ -1,7 +1,7 @@
 # Haidut Collected Works
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/ea470d86-cd36-4a90-949c-fc74bc899061" width="270" height="420" alt="Book Cover">
+  <img src="https://github.com/user-attachments/assets/e8f5439b-ad76-40a4-a1ae-ef0d9057e287" width="270" height="420" alt="Book Cover">
   
   <br>
   <br>
@@ -33,13 +33,59 @@
 
 <div align="center">
   <h2>⚡ Quick Start</h2>
-  <h3>Download the Latest Release</h3>
-  <p>Download the Latest PDFs</p>
+  <h3>Download Complete Collection</h3>
   
-  [![Download][Download-Badge]][Download-Link]
+  ~~[![Download Master][Master-Badge]][Master-Link]~~
 
-  [Download-Badge]: https://img.shields.io/badge/Download_Latest_Release-2563eb?style=for-the-badge&logo=github&logoColor=white&labelColor=1e40af
-  [Download-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/latest/
+  [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-6b7280?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
+  [Master-Link]: #
+  
+  <h3>Download Individual Volumes</h3>
+  <p>Choose specific years from the collection below:</p>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 800px; margin: 0 auto;">
+    
+  ~~[![2013][2013-Badge]][2013-Link]~~
+  ~~[![2014][2014-Badge]][2014-Link]~~
+  ~~[![2015][2015-Badge]][2015-Link]~~
+  ~~[![2016][2016-Badge]][2016-Link]~~
+  
+  ~~[![2017][2017-Badge]][2017-Link]~~
+  ~~[![2018][2018-Badge]][2018-Link]~~
+  ~~[![2019][2019-Badge]][2019-Link]~~
+  ~~[![2020][2020-Badge]][2020-Link]~~
+  
+  ~~[![2021][2021-Badge]][2021-Link]~~
+  ~~[![2022][2022-Badge]][2022-Link]~~
+  ~~[![2023][2023-Badge]][2023-Link]~~
+  [![2024][2024-Badge]][2024-Link]
+  
+  </div>
+
+  [2013-Badge]: https://img.shields.io/badge/2013-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2013-Link]: #
+  [2014-Badge]: https://img.shields.io/badge/2014-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2014-Link]: #
+  [2015-Badge]: https://img.shields.io/badge/2015-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2015-Link]: #
+  [2016-Badge]: https://img.shields.io/badge/2016-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2016-Link]: #
+  [2017-Badge]: https://img.shields.io/badge/2017-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2017-Link]: #
+  [2018-Badge]: https://img.shields.io/badge/2018-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2018-Link]: #
+  [2019-Badge]: https://img.shields.io/badge/2019-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2019-Link]: #
+  [2020-Badge]: https://img.shields.io/badge/2020-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2020-Link]: #
+  [2021-Badge]: https://img.shields.io/badge/2021-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2021-Link]: #
+  [2022-Badge]: https://img.shields.io/badge/2022-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2022-Link]: #
+  [2023-Badge]: https://img.shields.io/badge/2023-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2023-Link]: #
+  [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2024-Link]: #
   
   <sup>📖 View the README for more information.</sup>
 </div>
@@ -51,7 +97,7 @@
 >[!CAUTION]
 > **CONTENT ACCURACY NOTICE**
 > 
-> This repository contains content that has been automatically parsed from scraped web data. While care has been taken to manually verify the accuracy and quality of the data, verification of all content is not possible. Please exercise caution when using or referencing anything contained within this content.
+> This repository contains content that has been automatically parsed from scraped web data. While every file has been manually reviewed, the content may contain errors, omissions, or inaccuracies. Effort will be made to update and correct the content as issues are discovered.
 <h3>📎 About:</h3>
 
 **Haidut Collected Works**  
@@ -76,19 +122,3 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 
 - Standard 8.5"x11" paper size.
 - 12 volumes, 2013-2024.
-
-<h3>🧮 Project Structure:</h3>
-
-```
-
-```
-
-<div align="center">
-  <h2>⚒️ Building from Source</h2>
-</div>
-
-<h3>📄 Instructions:</h3>
-
-```bash
-
-```
