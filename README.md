@@ -147,6 +147,9 @@ tufte-latex
 > The compilation requires a year argument between 2013-2024. This determines which volume to build.
 
 ```bash
+# Unzip Articles (Compressed for GitHub)
+unzip Articles/[YEAR]/Articles.zip
+
 # Initial LaTeX Compilation
 lualatex HaidutCollectedWorks [YEAR]
 
