@@ -1,0 +1,133 @@
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[CoverBG] (current page.south west) rectangle (current page.north east);
+  
+  \node[opacity=1,
+        text=YearColor,
+        font=\sffamily\bfseries\fontsize{280}{280}\selectfont,
+        rotate=90]
+        at ($(current page.center) + (72.5mm,0)$) {\coveryear};
+
+  \begin{scope}[opacity=0.75]
+    % Caffeine
+    \node[color=MoleculeColor, scale=0.6, rotate=15] at ($(current page.south east) + (-90mm,85mm)$) {
+      \chemfig{*6((=O)-N(-CH_3)-*5(-N=-N(-CH_3)-=)--(=O)-N(-H_3C)-)}
+    };
+    
+    % Aspirin
+    \node[color=MoleculeColor, scale=0.7, rotate=-15] at ($(current page.east) + (-122.5mm,55mm)$) {
+      \chemfig{*6(-=-(-O-[::-60](=[::-60]O)-[::+60])=(-(=[::+60])-[::-60]OH)-=)}
+    };
+    
+    % Penicillin 
+    \node[color=MoleculeColor, scale=0.6, rotate=15] at ($(current page.north east) + (-40mm,-17.5mm)$) {
+      \chemfig{R-[:-30](=[6,0.7]O)-[::60]\chemabove{N}{H}>[7]*4(-(=[5,0.7]O)-N*5(-(<:[,0.7](=[::-50,0.7]O)(-[::50,0.7]OH))-(-[:-30]CH_{3})(-[:30]CH_{3})-S--)-(<:[2]H)-)}
+    };
+    
+    % Dopamine
+    \node[color=MoleculeColor, scale=0.75, rotate=27.5] at ($(current page.north west) + (32.5mm,-30mm)$) {
+      \chemfig{*6((-HO)-=-(--[:-30]-NH_{2})=-(-HO)=)}
+    };
+
+    % Triiodothyronine (T3)
+    \node[color=MoleculeColor, scale=0.6, rotate=10] at ($(current page.west) + (45mm,70mm)$) {
+      \chemfig{*6((-([6]-([7]<:NH_2)([5]-([3]=O)([6]-OH))))-=(-I)-(-O([:-30]-(*6(-=(-I)-(-OH)=-=))))=(-I)-=)}
+    };
+
+    % Cholecalciferol (Vitamin D3)
+    \node[color=MoleculeColor, scale=0.5, rotate=-10] at ($(current page.south west) + (35mm,55mm)$) {
+      \chemfig{*6((<:HO)---(=CH_2)-(=([9]-([2]=(*6(-([6]<:H)(*5(---([8.5]<:H)([2]-([3.5]<:H_3C)([:30]-([:-30]-([:30]-([:-30]-([6]-CH_3)([1]-CH_3))))))-([10]<CH_3)-))-----)))))--)}
+    };
+    
+    % Cyproheptadine
+    \node[color=MoleculeColor, scale=0.55, rotate=30] at ($(current page.north) + (15mm,-30mm)$) {
+      \chemfig{[:12.5]*6(-=(*7(-(=(*6(---N(-)---)))-(*6(-=-=-=))--=--))-=-=)}
+    };
+
+    % Thiamine
+    \node[color=MoleculeColor, scale=0.5, rotate=25] at ($(current page.east) + (-140mm,-92.5mm)$) {
+      \chemfig{*6((-)-N=-(-([:-30]-N^{+}(*5(-(-)=(-([:-15]-([:-60]-OH)))-S-=))))=(-NH_2)-N=)}
+    };
+
+    % Progesterone
+    \node[color=MoleculeColor, scale=0.5, rotate=7.5] at ($(current page.center) + (10mm,35mm)$) {
+      \chemfig{*6((=O)-=(*6(---(*6(([2]<H)-([6]<:H)(*5(---([1]<([0]-)([3]=O))--))-([2]<)----))-([6]<:H)--))-([2]<)---)}
+    };
+
+    % Stearic Acid
+    \node[color=MoleculeColor, scale=0.4, rotate=-35] at ($(current page.center) + (0mm,85mm)$) {
+      \chemfig{[:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([2]=O)([:-30]-O)))))))))))))))))}
+    };
+
+    % Androsterone
+    \node[color=MoleculeColor, scale=0.5, rotate=-35] at ($(current page.south) + (0mm,22.5mm)$) {
+      \chemfig{*6((<:HO)--([6]<:H)(*6(---(*6(([2]<H)-([6]<:H)(*5(---(=O)--))-([2]<)----))-([6]<:H)--))-([2]<)---)}
+    };
+
+    % Glycine
+    \node[color=MoleculeColor, scale=0.75, rotate=5] at ($(current page.south) + (-47.5mm,17.5mm)$) {
+      \chemfig{H_2N-[:30]-[:-30]([6]-OH)([1]=O)}
+    };
+
+    % Naringenin
+    \node[color=MoleculeColor, scale=0.45, rotate=15] at ($(current page.center) + (-17.5mm,-45mm)$) {
+      \chemfig{*6(-([6]-OH)=(*6(-([6]=O)--(<:(*6(-=-(-OH)=-=)))-O--))-=-(-HO)=)}
+    };
+
+    % Methylene Blue
+    \node[color=MoleculeColor, scale=0.5, rotate=42.5] at ($(current page.north east) + (-145mm,-25mm)$) {
+      \chemfig{*6((-N([6]-)([3]-))=-(*6(=S^{+}-(*6(=-(-N([6]-)([1]-))=-=-))--N=-))--=-)}
+    };
+
+    % Magnesium Glycinate
+    \node[color=MoleculeColor, scale=0.6, rotate=-35] at ($(current page.south east) + (-100mm,55mm)$) {
+      \chemfig{H_2N-[:-30]-[:30]([2]=O)(-[:-30]O^{-}([1]-[,,,,draw=none]Mg^{2+}([-1]-[,,,,draw=none](O^{-}([:30]-([2]=O)([:-30]-([:30]-NH_2)))))))}
+    };
+
+  \end{scope}
+
+  \draw[LineColor, line width=1pt] 
+    ($(current page.west) + (10mm, 40mm)$) -- 
+    ($(current page.west) + (60mm, 40mm)$);
+  
+  \draw[AccentGold, line width=2pt] 
+    ($(current page.west) + (10mm, 38mm)$) -- 
+    ($(current page.west) + (45mm, 38mm)$);
+
+  \node[anchor=west] at ($(current page.west) + (10mm, 35mm)$) {
+      \color{AccentGold}\sffamily\fontsize{11pt}{11pt}\selectfont HAIDUT
+  };
+
+  \ifnum\coveryear>2009
+    \ifnum\coveryear<2020
+      \node[anchor=west] at ($(current page.west) + (10mm, -5mm)$) {
+    \else
+      \node[anchor=west] at ($(current page.west) + (10mm, -7.5mm)$) {
+    \fi
+  \else
+    \node[anchor=west] at ($(current page.west) + (10mm, -7.5mm)$) {
+  \fi
+      \begin{minipage}[t]{0.75\paperwidth}
+          \raggedright
+          {\color{TitleColor}\sffamily\bfseries\fontsize{42pt}{46pt}\selectfont COLLECTED~WORKS}\\[12pt]
+          {\color{SubtitleColor}\sffamily\fontsize{14pt}{16pt}\selectfont\textit{``TO~EXTRACT~KNOWLEDGE~FROM~MATTER''}}
+      \end{minipage}
+  };
+
+  \node[anchor=west] at ($(current page.west) + (10mm, -45mm)$) {
+      \color{AccentGold}\sffamily\fontsize{16pt}{16pt}\selectfont\covervolume~{\color{SubtitleColor}\textbullet}~\coveryear
+  };
+
+  \draw[AccentGold, line width=1pt] 
+    ($(current page.south west) + (10mm, 20mm)$) -- 
+    ($(current page.south west) + (35mm, 20mm)$);
+
+  \node[anchor=south east] at ($(current page.south east) + (-10mm,12mm)$) {
+      \begin{minipage}[b]{0.3\paperwidth}
+          \raggedleft
+          {\color{SubtitleColor}\sffamily\fontsize{8pt}{10pt}\selectfont Copyright~\copyright~\coveryear~Haidut~All~Rights~Reserved}
+      \end{minipage}
+  };
+
+\end{tikzpicture}
