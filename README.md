@@ -36,9 +36,9 @@
   <h3>Download Complete Collection</h3>
   <p>Includes All Years from 2013-2024.</p>
   
-  ~~[![Download Master][Master-Badge]][Master-Link]~~
+  [![Download Master][Master-Badge]][Master-Link]
 
-  [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-6b7280?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
+  [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-4f46e5?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
   [Master-Link]: #
   
   <h3>Download Individual Volumes</h3>
@@ -46,49 +46,48 @@
   
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 800px; margin: 0 auto;">
     
-  ~~[![2013][2013-Badge]][2013-Link]~~
-  ~~[![2014][2014-Badge]][2014-Link]~~
-  ~~[![2015][2015-Badge]][2015-Link]~~
-  ~~[![2016][2016-Badge]][2016-Link]~~
+  [![2013][2013-Badge]][2013-Link]
+  [![2014][2014-Badge]][2014-Link]
+  [![2015][2015-Badge]][2015-Link]
+  [![2016][2016-Badge]][2016-Link]
   
-  ~~[![2017][2017-Badge]][2017-Link]~~
-  ~~[![2018][2018-Badge]][2018-Link]~~
-  ~~[![2019][2019-Badge]][2019-Link]~~
-  ~~[![2020][2020-Badge]][2020-Link]~~
+  [![2017][2017-Badge]][2017-Link]
+  [![2018][2018-Badge]][2018-Link]
+  [![2019][2019-Badge]][2019-Link]
+  [![2020][2020-Badge]][2020-Link]
   
-  ~~[![2021][2021-Badge]][2021-Link]~~
-  ~~[![2022][2022-Badge]][2022-Link]~~
-  ~~[![2023][2023-Badge]][2023-Link]~~
-  ~~[![2024][2024-Badge]][2024-Link]~~
+  [![2021][2021-Badge]][2021-Link]
+  [![2022][2022-Badge]][2022-Link]
+  [![2023][2023-Badge]][2023-Link]
+  [![2024][2024-Badge]][2024-Link]
   
   </div>
 
-  [2013-Badge]: https://img.shields.io/badge/2013-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2013-Badge]: https://img.shields.io/badge/2013-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2013-Link]: #
-  [2014-Badge]: https://img.shields.io/badge/2014-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2014-Badge]: https://img.shields.io/badge/2014-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2014-Link]: #
-  [2015-Badge]: https://img.shields.io/badge/2015-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2015-Badge]: https://img.shields.io/badge/2015-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2015-Link]: #
-  [2016-Badge]: https://img.shields.io/badge/2016-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2016-Badge]: https://img.shields.io/badge/2016-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2016-Link]: #
-  [2017-Badge]: https://img.shields.io/badge/2017-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2017-Badge]: https://img.shields.io/badge/2017-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2017-Link]: #
-  [2018-Badge]: https://img.shields.io/badge/2018-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2018-Badge]: https://img.shields.io/badge/2018-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2018-Link]: #
-  [2019-Badge]: https://img.shields.io/badge/2019-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2019-Badge]: https://img.shields.io/badge/2019-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2019-Link]: #
-  [2020-Badge]: https://img.shields.io/badge/2020-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2020-Badge]: https://img.shields.io/badge/2020-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2020-Link]: #
-  [2021-Badge]: https://img.shields.io/badge/2021-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2021-Badge]: https://img.shields.io/badge/2021-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2021-Link]: #
-  [2022-Badge]: https://img.shields.io/badge/2022-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2022-Badge]: https://img.shields.io/badge/2022-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2022-Link]: #
-  [2023-Badge]: https://img.shields.io/badge/2023-6b7280?style=for-the-badge&logo=document&logoColor=white
+  [2023-Badge]: https://img.shields.io/badge/2023-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2023-Link]: #
   [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
   [2024-Link]: #
   
-  <sup>📖 View the README for more information.</sup>
 </div>
 
 <div align="center">
@@ -108,16 +107,11 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 
 <h3>📏 Improvements:</h3>
 
-- Removed duplicate replies, quotes, and text.
-- Anonymized usernames.
 - URLs and references are converted into a proper citations.
 - Implimented proper scientific notation (e.x., CO2 -> CO<sub>2</sub>).
 - Standarized capitalizations (e.x., "dna" -> "DNA").
 - Corrected spelling, grammar, and capitalizations.
 - Implimented proper fancy quotes (using csquotes).
-- Removed formatting (bold, italics, underline, color).
-- Removed irrelevant replies ("Thanks," etc.)
-- And more!
 
 <h3>🔖 Notes:</h3>
 
@@ -142,26 +136,28 @@ tufte-latex
 <h3>🏗️ Compilation Process</h3>
 
 >[!NOTE]
-> **ARGUMENT REQUIRED**
+> **COMMAND-LINE ARGUMENT REQUIRED**
 > 
 > The compilation requires a year argument between 2013-2024. This determines which volume to build.
 
 ```bash
 # Unzip Articles (Compressed for GitHub)
-unzip Articles/[YEAR]/Articles.zip
+unzip Articles/$YEAR/Articles.zip
 
-# Initial LaTeX Compilation
-lualatex HaidutCollectedWorks [YEAR]
+# First LaTeX Compilation
+lualatex HaidutCollectedWorks $YEAR
 
 # Process the Bibliography
 biber HaidutCollectedWorks
 
+# Second LaTeX Compilation
+lualatex HaidutCollectedWorks $YEAR
+
 # Generate Index
 makeindex HaidutCollectedWorks
 
-# Final LaTeX Compilation
-lualatex HaidutCollectedWorks [YEAR]
-lualatex HaidutCollectedWorks [YEAR]
+# Third LaTeX Compilation
+lualatex HaidutCollectedWorks $YEAR
 
 # Remove Blank Pages and Rebuild Index
 python3 Scripts/Remove_Blank_Pages.py HaidutCollectedWorks.pdf
