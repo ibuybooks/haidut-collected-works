@@ -99,20 +99,64 @@
 > **CONTENT ACCURACY NOTICE**
 > 
 > This repository contains content that has been automatically parsed from scraped web data. While every file has been manually reviewed, the content may contain errors, omissions, or inaccuracies. Effort will be made to update and correct the content as issues are discovered.
+
 <h3>📎 About:</h3>
 
-**Haidut Collected Works**  
+**Haidut Collected Works**
 *A Comprehensive Collection of Haidut's Forum Posts, Replies, and Articles.*
 
-This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on the Ray Peat Forum from 2013 to 2024. Each article presented includes the main content, as well as the replies to which Haidut responded, any included or cited figures, and the references. The articles are compiled on a yearly basis, and there are twelve volumes in total.
+This project is a high-quality LuaLaTeX compilation of Haidut's work posted on the Ray Peat Forum, from the years 2013-2024. It contains all articles, discussions, and any figures/tables/etc., that are included in the article.
 
 <h3>📏 Improvements:</h3>
 
-- URLs and references are converted into a proper citations.
-- Implimented proper scientific notation (e.x., CO2 -> CO<sub>2</sub>).
-- Standarized capitalizations (e.x., "dna" -> "DNA").
-- Corrected spelling, grammar, and capitalizations.
-- Implimented proper fancy quotes (using csquotes).
+- **Proper Citations:**
+  References were converted into proper superscript citations, with irrelevant/redundant citations filtered out. Links have been matched to quotes, if any, and were filtered out of the text, while remaining in the references section.
+  - Normal Links:
+    
+    From:
+    
+    >http[s]://example.com
+    >
+    >"This quote came from the site above, but was not given a proper citation..."
+
+    To:
+    
+    >"This quote came from the site above, but was not given a proper citation..."<sup>[1]</sup>
+    
+  - HTML links:
+ 
+    From:
+    
+    >"This quote contains a html href tag HERE, which contains a link..."
+
+    To:
+    
+    >"This quote contains a html href tag HERE,<sup>[1]</sup> which contains a link..."
+
+- **Scientific Notation:**  
+  Corrected notation for chemical formulas, mathematical expressions, and statistical terms.
+  - Chemical formulas: "CO2" → "CO<sub>2</sub>" (CO$_{2}$)
+  - Greek letters: "α" → "$\alpha$"
+  - Statistical notation: "p<0.01" → *p* < 0.01 ("\textit{p} < 0.01")
+  - SI units: 5mg → 5 mg, 10ml → 10 ml (proper spacing)
+
+- **Text Standardization:**
+  Ensured consistent capitalization (e.g., "gaba" → "GABA", "pubmed" → "PubMed"), corrected spelling, adjusted bold/italics/underline/coloring, and fixed grammar (minimally).
+
+- **Typographic Enhancements:**  
+  Uses proper typographic quotes, and correct (i.e. consistent) punctuation and spacing.
+  - Quotes: "Hello" → “Hello” (via the `csquotes` package)
+  - Punctuation: Moved punctuation inside quotes where appropriate (e.g., "word", → "word,")
+  - Misc LaTeX Improvements: (e.g., "..." → "\dots{}", "—" → "--", etc. for proper typography/kerning/spacing)
+
+- **Figures, Tables, and Images:**
+  Embedded all referrenced figures, tables (as images), and other relevant images into all of the articles, for quick access.
+
+- **Anonymization:** 
+  Anonymizes usernames (e.g., "John Doe" → "Anonymous #1") while preserving Haidut's own.
+
+- **Searchable Greek Letters:**
+  A custom implimentation allows cross-viewer/platform searching of both actual Greek characters and their English counterparts (e.g., "TNF-α," "TNF-alpha," and "TNF-a" are all valid, and will yield the same results).
 
 <h3>🔖 Notes:</h3>
 
@@ -128,9 +172,9 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work, posted on 
 The following packages are required and should be installed through your LaTeX distribution's package manager:
 
 ```bash
-babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox
-xurl, extdash, hyperref, fancyhdr, changepage, makeidx, titlesec, tcolorbox
-chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex
+babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox,
+xurl, extdash, hyperref, fancyhdr, changepage, makeidx, xstring, titlesec, tcolorbox,
+chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicode-math,
 tufte-latex
 ```
 
@@ -144,22 +188,23 @@ tufte-latex
 ```bash
 # Unzip Articles (Compressed for GitHub)
 unzip Articles/$YEAR/Articles.zip
+rm Articles/$YEAR/Articles.zip
 
-# First LaTeX Compilation
+# First LuaLaTeX Compilation
 lualatex HaidutCollectedWorks $YEAR
 
 # Process the Bibliography
 biber HaidutCollectedWorks
 
-# Second LaTeX Compilation
+# Second LuaLaTeX Compilation
 lualatex HaidutCollectedWorks $YEAR
 
-# Generate Index
+# Generate the Index
 makeindex HaidutCollectedWorks
 
-# Third LaTeX Compilation
+# Third LuaLaTeX Compilation
 lualatex HaidutCollectedWorks $YEAR
 
-# Remove Blank Pages and Rebuild Index
-python3 Scripts/Remove_Blank_Pages.py HaidutCollectedWorks.pdf
+# Fourth LuaLaTeX Compilation
+lualatex HaidutCollectedWorks $YEAR
 ```
