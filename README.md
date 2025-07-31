@@ -191,20 +191,20 @@ unzip Articles/$YEAR/Articles.zip
 rm Articles/$YEAR/Articles.zip
 
 # First LuaLaTeX Compilation
-lualatex HaidutCollectedWorks $YEAR
+lualatex CollectedWorks $YEAR
 
 # Process the Bibliography
-biber HaidutCollectedWorks
+biber CollectedWorks
 
 # Second LuaLaTeX Compilation
-lualatex HaidutCollectedWorks $YEAR
+lualatex CollectedWorks $YEAR
 
 # Generate the Index
-makeindex HaidutCollectedWorks
+makeindex CollectedWorks
 
 # Third LuaLaTeX Compilation
-lualatex HaidutCollectedWorks $YEAR
+lualatex CollectedWorks $YEAR
 
 # Fourth LuaLaTeX Compilation
-lualatex HaidutCollectedWorks $YEAR
+lualatex CollectedWorks $YEAR
 ```
