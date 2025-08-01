@@ -169,10 +169,9 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work posted on t
 The following packages are required and should be installed through your LaTeX distribution's package manager:
 
 ```bash
-babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox, eso-pic,
+babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox, tufte-latex,
 xurl, extdash, hyperref, fancyhdr, changepage, makeidx, xstring, titlesec, tcolorbox,
 chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicode-math,
-tufte-latex 
 ```
 
 <h3>🏗️ Compilation Process</h3>
