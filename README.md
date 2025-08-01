@@ -152,9 +152,6 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work posted on t
 - **Figures, Tables, and Images:**
   Embedded all referrenced figures, tables (as images), and other relevant images into all of the articles, for quick access.
 
-- **Anonymization:** 
-  Anonymizes usernames (e.g., "John Doe" → "Anonymous #1") while preserving Haidut's own.
-
 - **Searchable Greek Letters:**
   A custom implimentation allows cross-viewer/platform searching of both actual Greek characters and their English counterparts (e.g., "TNF-α," "TNF-alpha," and "TNF-a" are all valid, and will yield the same results).
 
@@ -172,10 +169,10 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work posted on t
 The following packages are required and should be installed through your LaTeX distribution's package manager:
 
 ```bash
-babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox,
+babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox, eso-pic,
 xurl, extdash, hyperref, fancyhdr, changepage, makeidx, xstring, titlesec, tcolorbox,
 chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicode-math,
-tufte-latex
+tufte-latex 
 ```
 
 <h3>🏗️ Compilation Process</h3>
