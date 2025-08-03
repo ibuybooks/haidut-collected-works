@@ -186,6 +186,10 @@ chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicod
 unzip Articles/$YEAR/Articles.zip
 rm Articles/$YEAR/Articles.zip
 
+# Unzip Images (Compressed for GitHub)
+unzip Images/$YEAR/Images.zip
+rm Images/$YEAR/Images.zip
+
 # First LuaLaTeX Compilation
 lualatex CollectedWorks $YEAR
 
