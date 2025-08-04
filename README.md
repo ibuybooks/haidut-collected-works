@@ -102,10 +102,7 @@
 
 <h3>📎 About:</h3>
 
-**Haidut Collected Works**
-*A Comprehensive Collection of Haidut's Forum Posts, Replies, and Articles.*
-
-This project is a high-quality LuaLaTeX compilation of Haidut's work posted on the Ray Peat Forum, from the years 2013-2024. It contains all articles, discussions, and any figures/tables/etc., that are included in the article.
+This project is a high-quality LuaLaTeX compilation of Haidut's work posted on the Ray Peat Forum, from the years 2013-2024.
 
 <h3>📏 Improvements:</h3>
 
@@ -207,4 +204,7 @@ lualatex CollectedWorks $YEAR
 
 # Fourth LuaLaTeX Compilation
 lualatex CollectedWorks $YEAR
+
+# Remove Extra Blank Pages
+python3 Scripts/Remove-Blank-Pages.py CollectedWorks.pdf
 ```
