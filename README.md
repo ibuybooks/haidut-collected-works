@@ -1,4 +1,4 @@
-# Haidut Collected Works
+# The Collected Works of Haidut
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/77ff4f5d-0348-4ef5-9030-1837223ae059" width="350" alt="Book Cover">
