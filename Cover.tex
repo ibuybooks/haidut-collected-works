@@ -1,0 +1,140 @@
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[CoverBG] (current page.south west) rectangle (current page.north east);
+  
+  \node[opacity=1,
+        text=YearColor,
+        font=\sffamily\bfseries\fontsize{280}{280}\selectfont,
+        rotate=90]
+        at ($(current page.center) + (72.5mm, -2.5mm)$) {\addfontfeatures{Numbers=Monospaced}\textls[25]{\StrLeft{\coveryear}{2}}\kern0.075em\textls[25]{\StrRight{\coveryear}{2}}};
+
+  \begin{scope}[opacity=0.75]
+    % Caffeine
+    \node[color=MoleculeColor, scale=0.6, rotate=15] at ($(current page.south east) + (-90mm,85mm)$) {
+      \chemfig{*6((=O)-N(-CH_3)-*5(-N=-N(-CH_3)-=)--(=O)-N(-H_3C)-)}
+    };
+    
+    % Aspirin
+    \node[color=MoleculeColor, scale=0.7, rotate=-15] at ($(current page.east) + (-118.5mm,57mm)$) {
+      \chemfig{*6(-=-(-O-[::-60](=[::-60]O)-[::+60])=(-(=[::+60])-[::-60]OH)-=)}
+    };
+    
+    % Nicotinamide
+    \node[color=MoleculeColor, scale=0.6, rotate=0] at ($(current page.east) + (-136.5mm,29mm)$) {
+      \chemfig{*6(-N=-(-([2]=O)([:-30]-NH_{2}))=-=)}
+    };
+
+
+    % Pyruvic Acid 
+    \node[color=MoleculeColor, scale=0.5, rotate=15] at ($(current page.south east) + (-90mm,115mm)$) {
+      \chemfig{[:-30]H_{3}C-([:30]-([2]=O)([:-30]-OH))([-2]=O)}
+    };
+
+    % Choline
+    \node[color=MoleculeColor, scale=1, rotate=5] at ($(current page.south west) + (29mm,80mm)$) {
+      \chemfig{-N^{+}([2]-)([4]-)([6]-)(-([:60]-([:0]-OH)))}
+    };
+    
+    % Dopamine
+    \node[color=MoleculeColor, scale=0.75, rotate=27.5] at ($(current page.north west) + (32.5mm,-30mm)$) {
+      \chemfig{*6((-HO)-=-(--[:-30]-NH_{2})=-(-HO)=)}
+    };
+
+    % Triiodothyronine
+    \node[color=MoleculeColor, scale=0.6, rotate=10] at ($(current page.west) + (45mm,70mm)$) {
+      \chemfig{*6((-([6]-([7]<:NH_2)([5]-([3]=O)([6]-OH))))-=(-I)-(-O([:-30]-(*6(-=(-I)-(-OH)=-=))))=(-I)-=)}
+    };
+
+    % Cholecalciferol
+    \node[color=MoleculeColor, scale=0.5, rotate=-20] at ($(current page.south west) + (45mm,55mm)$) {
+      \chemfig{*6((<:HO)---(=CH_2)-(=([9]-([2]=(*6(-([6]<:H)(*5(---([8.5]<:H)([2]-([3.5]<:H_3C)([:30]-([:-30]-([:30]-([:-30]-([6]-CH_3)([1]-CH_3))))))-([10]<CH_3)-))-----)))))--)}
+    };
+    
+    % Cyproheptadine
+    \node[color=MoleculeColor, scale=0.55, rotate=30] at ($(current page.north) + (15mm,-30mm)$) {
+      \chemfig{[:12.5]*6(-=(*7(-(=(*6(---N(-)---)))-(*6(-=-=-=))--=--))-=-=)}
+    };
+
+    % Thiamine
+    \node[color=MoleculeColor, scale=0.5, rotate=25] at ($(current page.east) + (-137mm,-96.5mm)$) {
+      \chemfig{*6((-)-N=-(-([:-30]-N^{+}(*5(-(-)=(-([:-15]-([:-60]-OH)))-S-=))))=(-NH_2)-N=)}
+    };
+
+    % Progesterone
+    \node[color=MoleculeColor, scale=0.5, rotate=7.5] at ($(current page.center) + (10mm,35mm)$) {
+      \chemfig{*6((=O)-=(*6(---(*6(([2]<H)-([6]<:H)(*5(---([1]<([0]-)([3]=O))--))-([2]<)----))-([6]<:H)--))-([2]<)---)}
+    };
+
+    % Stearic Acid
+    \node[color=MoleculeColor, scale=0.4, rotate=-35] at ($(current page.center) + (0mm,85mm)$) {
+      \chemfig{[:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([:-30]-([:30]-([2]=O)([:-30]-O)))))))))))))))))}
+    };
+
+    % Androsterone
+    \node[color=MoleculeColor, scale=0.5, rotate=-35] at ($(current page.south) + (0mm,22.5mm)$) {
+      \chemfig{*6((<:HO)--([6]<:H)(*6(---(*6(([2]<H)-([6]<:H)(*5(---(=O)--))-([2]<)----))-([6]<:H)--))-([2]<)---)}
+    };
+
+    % Glycine
+    \node[color=MoleculeColor, scale=0.75, rotate=5] at ($(current page.south) + (-47.5mm,17.5mm)$) {
+      \chemfig{H_2N-[:30]-[:-30]([6]-OH)([1]=O)}
+    };
+
+    % Naringenin
+    \node[color=MoleculeColor, scale=0.6, rotate=15] at ($(current page.center) + (-20.5mm,-46mm)$) {
+      \chemfig{*6(-([6]-OH)=(*6(-([6]=O)--(<:(*6(-=-(-OH)=-=)))-O--))-=-(-HO)=)}
+    };
+
+    % Methylene Blue
+    \node[color=MoleculeColor, scale=0.5, rotate=42.5] at ($(current page.north east) + (-145mm,-25mm)$) {
+      \chemfig{*6((-N([6]-)([3]-))=-(*6(=S^{+}-(*6(=-(-N([6]-)([1]-))=-=-))--N=-))--=-)}
+    };
+
+    % Magnesium Glycinate
+    \node[color=MoleculeColor, scale=0.6, rotate=-35] at ($(current page.south east) + (-100mm,55mm)$) {
+      \chemfig{H_2N-[:-30]-[:30]([2]=O)(-[:-30]O^{-}([1]-[,,,,draw=none]Mg^{2+}([-1]-[,,,,draw=none](O^{-}([:30]-([2]=O)([:-30]-([:30]-NH_2)))))))}
+    };
+
+    % Retinol 
+    \node[color=MoleculeColor, scale=0.5, rotate=0] at ($(current page.north east) + (-38mm,-13.5mm)$) {
+      \chemfig{*6(--(-)=([:30]-([:-30]=([:30]-([2]-)([:-30]=([:30]-([:-30]=([:30]-([2]-)([:-30]=([:30]-([:-30]-OH))))))))))-([3]-)([1]-)--)}
+    };
+
+  \end{scope}
+
+  \draw[LineColor, line width=1pt] 
+    ($(current page.west) + (10mm, 40mm)$) -- 
+    ($(current page.west) + (60mm, 40mm)$);
+  
+  \draw[AccentGold, line width=2pt] 
+    ($(current page.west) + (10mm, 38mm)$) -- 
+    ($(current page.west) + (45mm, 38mm)$);
+
+  \node[anchor=west] at ($(current page.west) + (8.5mm, 33mm)$) {
+      \color{AccentGold}\sffamily\fontsize{16pt}{16pt}\selectfont HAIDUT
+  };
+
+  \node[anchor=west] at ($(current page.west) + (9.25mm, 0mm)$) {
+    \begin{minipage}[t]{0.75\paperwidth}
+        \raggedright
+        {\color{TitleColor}\sffamily\bfseries\fontsize{42pt}{46pt}\selectfont THE}\\[12pt]
+        {\color{TitleColor}\sffamily\bfseries\fontsize{42pt}{46pt}\selectfont COLLECTED~WORKS}\\[12pt]
+        {\color{SubtitleColor}\sffamily\fontsize{14pt}{16pt}\selectfont\textit{\enquote{TO~EXTRACT~KNOWLEDGE~FROM~MATTER}}}
+    \end{minipage}
+  };
+
+  \node[anchor=west] at ($(current page.west) + (9.25mm, -35mm)$) {
+      \color{AccentGold}\sffamily\fontsize{16pt}{16pt}\selectfont\covervolume~{\color{SubtitleColor}\textbullet}~\coveryear
+  };
+
+  \draw[AccentGold, line width=1pt] 
+    ($(current page.south west) + (10mm, 20mm)$) -- 
+    ($(current page.south west) + (35mm, 20mm)$);
+
+  \node[anchor=south east] at ($(current page.south east) + (-10mm,8mm)$) {
+      \begin{minipage}[b]{0.3\paperwidth}
+          \raggedleft
+          {\color{SubtitleColor}\sffamily\fontsize{8pt}{10pt}\selectfont Copyright~\copyright~\coveryear~Haidut~All~Rights~Reserved}
+      \end{minipage}
+  };
+
+\end{tikzpicture}
