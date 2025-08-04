@@ -1,0 +1,482 @@
+\documentclass[symmetric,notoc,nobib,nols]{tufte-book}
+
+% ——————— PACKAGES ———————
+\usepackage[USenglish]{babel}
+\usepackage[maxlevel=3]{csquotes}
+\usepackage[nopatch=footnote]{microtype} 
+\usepackage{fontspec}
+\usepackage{xparse}
+\usepackage{lua-ul}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{xurl}
+\usepackage[shortcuts]{extdash}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage{makeidx}
+\usepackage{xstring}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{chemfig}
+\usepackage{luacode}
+\usepackage{luacolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage{chngcntr}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage[breakall]{truncate}
+\usepackage{unicode-math}
+
+% ——————— FONTS & MICROTYPOGRAPHY ———————
+\renewcommand{\smallcapsspacing}[1]{\textls[50]{#1}}
+\renewcommand{\allcapsspacing}[1]{\textls[200]{#1}}
+
+\defaultfontfeatures{Ligatures=TeX,Numbers={Proportional}}
+
+\setmainfont{EB-Garamond}[
+    Path = Fonts/EB-Garamond/,
+    Extension = .ttf,
+    UprightFont = EB-Garamond-Regular,
+    BoldFont = EB-Garamond-Bold,
+    ItalicFont = EB-Garamond-Italic,
+    BoldItalicFont = EB-Garamond-BoldItalic,
+    FontFace = {m}{n}{EB-Garamond-Medium},
+    FontFace = {m}{it}{EB-Garamond-MediumItalic},
+    FontFace = {sb}{n}{EB-Garamond-SemiBold},
+    FontFace = {sb}{it}{EB-Garamond-SemiBoldItalic},
+    FontFace = {eb}{n}{EB-Garamond-ExtraBold},
+    FontFace = {eb}{it}{EB-Garamond-ExtraBoldItalic},
+    Numbers={Proportional} 
+]
+
+\newfontface\textsb{EB Garamond SemiBold}
+
+\setmathfont{Garamond-Math.otf}
+
+\setsansfont{Open-Sans}[
+    Path = Fonts/Open-Sans/,
+    Extension = .ttf,
+    UprightFont = Open-Sans-Regular,
+    BoldFont = Open-Sans-Bold,
+    ItalicFont = Open-Sans-Italic,
+    BoldItalicFont = Open-Sans-BoldItalic,
+    FontFace = {l}{n}{Open-Sans-Light},
+    FontFace = {l}{it}{Open-Sans-LightItalic},
+    FontFace = {m}{n}{Open-Sans-Medium},
+    FontFace = {m}{it}{Open-Sans-MediumItalic},
+    FontFace = {sb}{n}{Open-Sans-SemiBold},
+    FontFace = {sb}{it}{Open-Sans-SemiBoldItalic},
+    FontFace = {eb}{n}{Open-Sans-ExtraBold},
+    FontFace = {eb}{it}{Open-Sans-ExtraBoldItalic}
+]
+
+% ——————— ARTICLE LOADING ———————
+\newcommand{\coveryear}{}
+\newcommand{\covervolume}{}
+
+\begin{luacode*}
+local year = nil
+local args = arg or {}
+
+if args[2] then
+year = tonumber(args[2])
+  if not year or year < 2013 or year > 2024 then
+    os.exit(1)
+  end
+else
+  os.exit(1)
+end
+
+function include_articles(directory)
+  local files = {}
+  for file in lfs.dir(directory) do
+    if string.match(file, "%.tex$") then
+      table.insert(files, file)
+    end
+  end
+  table.sort(files)
+  for _, file in ipairs(files) do
+    tex.sprint("\\input{" .. directory .. "/" .. file .. "}")
+    tex.sprint("\\clearpage")  
+  end
+end
+
+function load_articles()
+  include_articles("Articles/" .. year)
+end
+
+function int_to_roman(num)
+  local values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
+  local numerals = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
+  local result = ""
+  
+  for i = 1, #values do
+    while num >= values[i] do
+      result = result .. numerals[i]
+      num = num - values[i]
+    end
+  end
+  
+  return result
+end
+
+function set_cover_year()
+  local volume_num = year - 2012
+  local roman_volume = int_to_roman(volume_num)
+  
+  tex.sprint("\\renewcommand{\\coveryear}{" .. year .. "}")
+  tex.sprint("\\renewcommand{\\covervolume}{VOLUME~" .. roman_volume .. "}")
+end
+
+function load_bibliography()
+  tex.sprint("\\addbibresource{Bibliographies/" .. year .. ".bib}")
+end
+
+function get_pdf_title()
+  local volume_num = year - 2012
+  local roman_volume = int_to_roman(volume_num)
+  tex.sprint("The Collected Works, Volume " .. roman_volume .. " (" .. year .. ")")
+end
+\end{luacode*}
+
+% ——————— CUSTOM GREEK LETTER HANDLER ———————
+\makeatletter
+
+\newcommand{\invisiblesearchable}[1]{%
+  \pdfextension literal direct{3 Tr}#1%
+  \pdfextension literal direct{0 Tr}%
+}
+
+\newcommand{\replacegreek}[1]{%
+  \StrSubstitute{#1}{$\mu$g}{ug}[\temp]%
+  \StrSubstitute{\temp}{$\mu$L}{uL}[\temp]%
+  \StrSubstitute{\temp}{$\mu$m}{um}[\temp]%
+  \StrSubstitute{\temp}{$\mu$s}{us}[\temp]%
+  \StrSubstitute{\temp}{$\mu$mol}{umol}[\temp]%
+  \StrSubstitute{\temp}{$\mu$M}{uM}[\temp]%
+  \StrSubstitute{\temp}{$\alpha$}{alpha}[\temp]%
+  \StrSubstitute{\temp}{$\beta$}{beta}[\temp]%
+  \StrSubstitute{\temp}{$\gamma$}{gamma}[\temp]%
+  \StrSubstitute{\temp}{$\delta$}{delta}[\temp]%
+  \StrSubstitute{\temp}{$\epsilon$}{epsilon}[\temp]%
+  \StrSubstitute{\temp}{$\zeta$}{zeta}[\temp]%
+  \StrSubstitute{\temp}{$\eta$}{eta}[\temp]%
+  \StrSubstitute{\temp}{$\theta$}{theta}[\temp]%
+  \StrSubstitute{\temp}{$\iota$}{iota}[\temp]%
+  \StrSubstitute{\temp}{$\kappa$}{kappa}[\temp]%
+  \StrSubstitute{\temp}{$\lambda$}{lambda}[\temp]%
+  \StrSubstitute{\temp}{$\mu$}{mu}[\temp]%
+  \StrSubstitute{\temp}{$\nu$}{nu}[\temp]%
+  \StrSubstitute{\temp}{$\xi$}{xi}[\temp]%
+  \StrSubstitute{\temp}{$o$}{o}[\temp]%
+  \StrSubstitute{\temp}{$\pi$}{pi}[\temp]%
+  \StrSubstitute{\temp}{$\rho$}{rho}[\temp]%
+  \StrSubstitute{\temp}{$\sigma$}{sigma}[\temp]%
+  \StrSubstitute{\temp}{$\tau$}{tau}[\temp]%
+  \StrSubstitute{\temp}{$\upsilon$}{upsilon}[\temp]%
+  \StrSubstitute{\temp}{$\phi$}{phi}[\temp]%
+  \StrSubstitute{\temp}{$\chi$}{chi}[\temp]%
+  \StrSubstitute{\temp}{$\psi$}{psi}[\temp]%
+  \StrSubstitute{\temp}{$\omega$}{omega}[\temp]%
+  \StrSubstitute{\temp}{$A$}{A}[\temp]%
+  \StrSubstitute{\temp}{$B$}{B}[\temp]%
+  \StrSubstitute{\temp}{$\Gamma$}{Gamma}[\temp]%
+  \StrSubstitute{\temp}{$\Delta$}{Delta}[\temp]%
+  \StrSubstitute{\temp}{$E$}{E}[\temp]%
+  \StrSubstitute{\temp}{$Z$}{Z}[\temp]%
+  \StrSubstitute{\temp}{$H$}{H}[\temp]%
+  \StrSubstitute{\temp}{$\Theta$}{Theta}[\temp]%
+  \StrSubstitute{\temp}{$I$}{I}[\temp]%
+  \StrSubstitute{\temp}{$K$}{K}[\temp]%
+  \StrSubstitute{\temp}{$\Lambda$}{Lambda}[\temp]%
+  \StrSubstitute{\temp}{$M$}{M}[\temp]%
+  \StrSubstitute{\temp}{$N$}{N}[\temp]%
+  \StrSubstitute{\temp}{$\Xi$}{Xi}[\temp]%
+  \StrSubstitute{\temp}{$O$}{O}[\temp]%
+  \StrSubstitute{\temp}{$\Pi$}{Pi}[\temp]%
+  \StrSubstitute{\temp}{$P$}{P}[\temp]%
+  \StrSubstitute{\temp}{$\Sigma$}{Sigma}[\temp]%
+  \StrSubstitute{\temp}{$T$}{T}[\temp]%
+  \StrSubstitute{\temp}{$\Upsilon$}{Upsilon}[\temp]%
+  \StrSubstitute{\temp}{$\Phi$}{Phi}[\temp]%
+  \StrSubstitute{\temp}{$X$}{X}[\temp]%
+  \StrSubstitute{\temp}{$\Psi$}{Psi}[\temp]%
+  \StrSubstitute{\temp}{$\Omega$}{Omega}[\temp]%
+  \temp%
+}
+
+\newcommand{\greek}[1]{%
+  \sbox0{#1}%
+  \begin{tikzpicture}[baseline=(base.base),inner sep=0,outer sep=0]
+     \node[anchor=base,inner sep=0,outer sep=0] (base) at (0,0){%
+     \invisiblesearchable{%
+       \resizebox{\wd0}{\ht0}{\replacegreek{#1}}%
+     }%
+   };
+
+  \node[anchor=base,inner sep=0,outer sep=0] at (0,0){#1};
+    
+  \end{tikzpicture}%
+}
+
+% ——————— BIBLIOGRAPHY ———————
+\usepackage[backend=biber,style=numeric-comp,sorting=none,citetracker=true]{biblatex}
+\directlua{load_bibliography()}
+\renewcommand{\bibfont}{\footnotesize\sffamily}
+\setlength{\bibitemsep}{0.75\baselineskip}
+\setlength{\bibhang}{1.5em}
+\DeclareFieldFormat{url}{\href{#1}{\path{#1}}}
+\defbibheading{subbibliography}[References]{\subsection*{\normalfont\bfseries\sffamily #1}}
+\renewcommand*{\biburlsetup}{%
+  \urlstyle{tt}%
+  \Urlmuskip=0mu plus 1mu
+}
+
+\setlength\bibitemsep{0.5\baselineskip}
+
+% ——————— PAGE LAYOUT ———————
+\makeatletter
+\setboolean{@tufte@justified}{true}
+\makeatother
+\geometry{textheight=46\baselineskip}
+
+\makeatletter
+\@addtoreset{figure}{chapter}
+\pretocmd{\chapter}{\setcounter{figure}{0}}{}{}
+\makeatother
+
+\setlength{\headheight}{22pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlist[itemize]{noitemsep, topsep=6pt}
+
+\setlist[enumerate]{topsep=6pt,itemsep=0pt,partopsep=0pt,parsep=0pt}
+
+% ——————— PARAGRAPH STYLE ———————
+\makeatletter
+\renewcommand{\@tufte@reset@par}{%
+  \setlength{\RaggedRightParindent}{1.0pc}%
+  \setlength{\JustifyingParindent}{1.0pc}%
+  \setlength{\parindent}{1pc}%
+  \setlength{\parskip}{0pt}%
+}
+\@tufte@reset@par
+
+\renewcommand{\@tufte@margin@par}{%
+  \setlength{\RaggedRightParindent}{0.5pc}%
+  \setlength{\JustifyingParindent}{0.5pc}%
+  \setlength{\parindent}{0.5pc}%
+  \setlength{\parskip}{0pt}%
+}
+\makeatother
+
+% ——————— QUOTE BOX STYLE ———————
+\tcbset{
+  quote/.style={
+    breakable,
+    enhanced,
+    colframe=black,  
+    boxrule=0pt, 
+    borderline west={1pt}{0pt}{black},
+    sharp corners,  
+    left=6pt,       
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    boxsep=0pt,
+    opacityfill=0
+  }
+}
+
+% ——————— INDEXING ———————
+\makeindex
+
+\makeatletter
+\renewenvironment{theindex}
+ {%
+ \small%
+ \ifthenelse{\equal{\@tufte@class}{book}}%
+ {\chapter{\indexname}}%
+ {\section*{\indexname}}%
+ \parskip0pt%
+ \parindent0pt%
+ \let\item\@idxitem%
+ \begin{multicols}{2}%
+ }
+ {\end{multicols}%
+ }
+\makeatother
+
+% ——————— TABLE OF CONTENTS CUSTOMIZATION ———————
+\makeatletter
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >-1
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@ % Vertical space before the entry
+    \begingroup
+      \parindent \z@ % Set paragraph indentation to 0
+      \begin{tabular}[t]{@{}p{\dimexpr\linewidth-\@pnumwidth}r@{}}
+        \bfseries #1 & \makebox[\@pnumwidth][r]{#2} \\
+      \end{tabular}\par
+    \endgroup
+    \penalty\@highpenalty
+  \fi
+}
+\makeatother
+
+% ——————— COLOR DEFINITIONS ———————
+\definecolor{ArticleBlue}{HTML}{0071BC}
+\definecolor{ArticleRed}{HTML}{E31C3D}
+
+\definecolor{CoverBG}{HTML}{0F1419}
+\definecolor{TitleColor}{HTML}{FFFFFF}
+\definecolor{AccentGold}{HTML}{D4AF37}
+\definecolor{SubtitleColor}{HTML}{B8BCC8}
+\definecolor{LineColor}{HTML}{2A3441}
+\definecolor{YearColor}{HTML}{1A202C}
+\definecolor{MoleculeColor}{HTML}{8B9DC3}
+
+% ——————— UNDERLINE CUSTOMIZATION ———————
+\let\OriginalUnderLine\underLine
+\renewcommand{\underLine}[2][]{%
+  \OriginalUnderLine[color=black,#1]{#2}%
+}
+
+% ——————— GRAPHICS OPTIONS ———————
+\graphicspath{{Images/}}
+
+% ——————— HYPERLINKS ———————
+\hypersetup{
+    colorlinks=true,
+    urlcolor=ArticleBlue,
+    linkcolor=ArticleBlue,
+    breaklinks=true,
+    pdfauthor={Haidut},
+    pdftitle={\directlua{get_pdf_title()}}
+}
+
+% ——————— CHAPTER STYLE ———————
+\newcommand{\chapterrule}{\begin{fullwidth}\rule{\linewidth}{1pt}\end{fullwidth}}
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\raggedright\setcounter{footnote}{0}\chapterrule\vspace{10pt}}
+  {}
+  {0pt}
+  {\begin{fullwidth}}
+  [\end{fullwidth}]
+\titlespacing*{\chapter}{0pt}{-42pt}{15pt}
+
+% ——————— ARTICLE METADATA ———————     
+\ExplSyntaxOn
+\NewDocumentCommand{\tags}{m}{
+  \begin{fullwidth}
+    \noindent{\sffamily\large\textbf{Haidut}}\par\vspace{1ex}
+    \noindent{\sffamily\footnotesize Tags:~
+      \clist_map_inline:nn { #1 } { \index{##1} }
+      \clist_use:nn { #1 } { ,~ }
+    }\par
+  \end{fullwidth}
+  \vspace{2.5ex}
+}
+\ExplSyntaxOff
+
+% ——————— HEADER & FOOTER ———————
+\newlength{\myfullwidth}
+\setlength{\myfullwidth}{\dimexpr\textwidth+\marginparwidth+\marginparsep\relax}
+
+\newcommand{\footerinfo}{}
+\newcommand{\info}[1]{\renewcommand{\footerinfo}{#1}}
+
+\newcommand{\myfooter}{%
+  \parbox[t]{\myfullwidth}{%
+    \rule{\linewidth}{1pt}\par\vspace{1pt}%
+    \sffamily\textbf{RAY PEAT FORUM} \footerinfo\hfill\sffamily\thepage
+  }%
+}
+\newcommand{\myfooterodd}{\myfooter}
+\newcommand{\myfootereven}{%
+  \makebox[0pt][r]{%
+    \hspace*{\dimexpr\marginparwidth+\marginparsep\relax}%
+    \myfooter
+  }%
+}
+
+% ——————— MAIN DOCUMENT ———————
+\begin{document}
+
+\pagenumbering{gobble}
+
+\directlua{set_cover_year()}
+\input{Cover}
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+
+\input{Title.tex}
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\sffamily\Large\allcapsspacing{CONTENTS}}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[RO]{{\sffamily\Huge\bfseries\allcapsspacing{CONTENTS}}}
+}
+
+\tableofcontents
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\makebox[\linewidth][r]{\sffamily\smallcaps{\truncate{0.85\linewidth}{\MakeTextUppercase{\leftmark}}}~{\sffamily\Large\textbar~\allcapsspacing{ARTICLE}}}}
+\fancyhead[LE]{\makebox[\linewidth][l]{{\sffamily\Large\allcapsspacing{ARTICLE}~\textbar}~\sffamily\smallcaps{\truncate{0.85\linewidth}{\MakeTextUppercase{\leftmark}}}}}
+\fancyfoot[LO]{\myfooterodd} 
+\fancyfoot[RE]{\myfootereven}
+\fancyfoot[LE,RO,C]{}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[RO]{{\sffamily\Huge\bfseries\allcapsspacing{ARTICLE}}}
+  \fancyfoot[LO]{\myfooterodd}%
+  \fancyfoot[RE]{\myfootereven}%
+  \fancyfoot[LE,RO,C]{}%
+}
+
+\pagenumbering{arabic}
+
+\directlua{load_articles()}
+
+\clearpage
+\thispagestyle{empty}
+\null
+\clearpage
+
+\pagestyle{empty}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[LE,RO]{{\sffamily\Large\allcapsspacing{INDEX}}}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[RO]{{\sffamily\Huge\bfseries\allcapsspacing{INDEX}}}
+}
+\printindex
+ 
+\end{document}
