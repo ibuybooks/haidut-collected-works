@@ -63,30 +63,30 @@
   
   </div>
 
-  [2013-Badge]: https://img.shields.io/badge/2013-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2013-Badge]: https://img.shields.io/badge/2013-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2013-Link]: #
-  [2014-Badge]: https://img.shields.io/badge/2014-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2014-Badge]: https://img.shields.io/badge/2014-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2014-Link]: #
-  [2015-Badge]: https://img.shields.io/badge/2015-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2015-Badge]: https://img.shields.io/badge/2015-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2015-Link]: #
-  [2016-Badge]: https://img.shields.io/badge/2016-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2016-Badge]: https://img.shields.io/badge/2016-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2016-Link]: #
-  [2017-Badge]: https://img.shields.io/badge/2017-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2017-Badge]: https://img.shields.io/badge/2017-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2017-Link]: #
-  [2018-Badge]: https://img.shields.io/badge/2018-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2018-Badge]: https://img.shields.io/badge/2018-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2018-Link]: #
-  [2019-Badge]: https://img.shields.io/badge/2019-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2019-Badge]: https://img.shields.io/badge/2019-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2019-Link]: #
-  [2020-Badge]: https://img.shields.io/badge/2020-4f46e5?style=for-the-badge&logo=document&logoColor=white
+  [2020-Badge]: https://img.shields.io/badge/2020-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2020-Link]: #
   [2021-Badge]: https://img.shields.io/badge/2021-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2021-Link]: #
+  [2021-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2021-v1/Haidut.-.The.Collected.Works.Volume.IX.2021.pdf
   [2022-Badge]: https://img.shields.io/badge/2022-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2022-Link]: #
+  [2022-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2022-v1/Haidut.-.The.Collected.Works.Volume.X.2022.pdf
   [2023-Badge]: https://img.shields.io/badge/2023-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2023-Link]: #
+  [2023-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2023-v1/Haidut.-.The.Collected.Works.Volume.XI.2023.pdf
   [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2024-Link]: #
+  [2024-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2024-v1/Haidut.-.The.Collected.Works.Volume.XII.2024.pdf
 
   <sup>📖 See the RELEASES tab for more information.</sup>
 </div>
