@@ -296,18 +296,18 @@ end
 
 \makeatletter
 \renewenvironment{theindex}
- {%
- \small%
- \ifthenelse{\equal{\@tufte@class}{book}}%
- {\chapter{\indexname}}%
- {\section*{\indexname}}%
- \parskip0pt%
- \parindent0pt%
- \let\item\@idxitem%
- \begin{multicols}{2}%
- }
- {\end{multicols}%
- }
+  {%
+  \small%
+  \ifthenelse{\equal{\@tufte@class}{book}}%
+  {\chapter{\indexname}}%
+  {\section*{\indexname}}%
+  \parskip0pt%
+  \parindent0pt%
+  \let\item\@idxitem%
+  \begin{multicols}{2}%
+  }
+  {\end{multicols}%
+  }
 \makeatother
 
 % ——————— TABLE OF CONTENTS CUSTOMIZATION ———————
@@ -403,6 +403,22 @@ end
   }%
 }
 
+\newcommand{\truncatedtext}{}
+\newcommand{\updatetruncatedtext}{%
+  \renewcommand{\truncatedtext}{\sffamily\smallcaps{\MakeTextUppercase{\leftmark}}}%
+}
+
+\newcommand{\truncateheader}[2]{%
+  \begingroup
+  \sbox0{#1}%
+  \ifdim\wd0>#2\relax
+    \truncate{#2}{#1}%
+  \else
+    #1%
+  \fi
+  \endgroup
+}
+
 % ——————— MAIN DOCUMENT ———————
 \begin{document}
 
@@ -440,8 +456,16 @@ end
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RO]{\makebox[\linewidth][r]{\sffamily\smallcaps{\truncate{0.85\linewidth}{\MakeTextUppercase{\leftmark}}}~{\sffamily\Large\textbar~\allcapsspacing{ARTICLE}}}}
-\fancyhead[LE]{\makebox[\linewidth][l]{{\sffamily\Large\allcapsspacing{ARTICLE}~\textbar}~\sffamily\smallcaps{\truncate{0.85\linewidth}{\MakeTextUppercase{\leftmark}}}}}
+\fancyhead[RO]{\updatetruncatedtext%
+  \sbox1{{\sffamily\Large\textbar~\allcapsspacing{ARTICLE}}}%
+  \newdimen\titlewidth%
+  \titlewidth=\dimexpr\linewidth-\wd1-0.5em\relax%
+  \makebox[\linewidth][r]{\truncateheader{\truncatedtext}{\titlewidth}~{\sffamily\Large\textbar~\allcapsspacing{ARTICLE}}}}
+\fancyhead[LE]{\updatetruncatedtext%
+  \sbox1{{\sffamily\Large\allcapsspacing{ARTICLE}~\textbar}}%
+  \newdimen\titlewidth%
+  \titlewidth=\dimexpr\linewidth-\wd1-0.5em\relax%
+  \makebox[\linewidth][l]{{\sffamily\Large\allcapsspacing{ARTICLE}~\textbar}~\truncateheader{\truncatedtext}{\titlewidth}}}
 \fancyfoot[LO]{\myfooterodd} 
 \fancyfoot[RE]{\myfootereven}
 \fancyfoot[LE,RO,C]{}
