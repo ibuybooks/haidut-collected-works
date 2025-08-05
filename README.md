@@ -38,7 +38,7 @@
   
   [![Download Master][Master-Badge]][Master-Link]
 
-  [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-4f46e5?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
+  [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-6b7280?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
   [Master-Link]: #
   
   <h3>Download Individual Volumes</h3>
