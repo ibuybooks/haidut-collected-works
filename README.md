@@ -80,13 +80,13 @@
   [2020-Badge]: https://img.shields.io/badge/2020-6b7280?style=for-the-badge&logo=document&logoColor=white
   [2020-Link]: #
   [2021-Badge]: https://img.shields.io/badge/2021-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2021-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2021-v1/Haidut.-.The.Collected.Works.Volume.IX.2021.pdf
+  [2021-Link]: #
   [2022-Badge]: https://img.shields.io/badge/2022-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2022-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2022-v1/Haidut.-.The.Collected.Works.Volume.X.2022.pdf
+  [2022-Link]: #
   [2023-Badge]: https://img.shields.io/badge/2023-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2023-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2023-v1/Haidut.-.The.Collected.Works.Volume.XI.2023.pdf
+  [2023-Link]: #
   [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2024-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2024-v1/Haidut.-.The.Collected.Works.Volume.XII.2024.pdf
+  [2024-Link]: #
 
   <sup>📖 See the RELEASES tab for more information.</sup>
 </div>
