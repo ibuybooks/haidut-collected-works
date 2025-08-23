@@ -53,7 +53,9 @@
 
 \newfontface\textsb{EB Garamond SemiBold}
 
-\setmathfont{Garamond-Math.otf}
+\newfontface\textsbit{EB Garamond SemiBoldItalic}
+
+\setmathfont{Garamond-Math.otf}[StylisticSet=4]
 
 \setsansfont{Open-Sans}[
     Path = Fonts/Open-Sans/,
@@ -211,7 +213,7 @@ end
   \sbox0{#1}%
   \begin{tikzpicture}[baseline=(base.base),inner sep=0,outer sep=0]
      \node[anchor=base,inner sep=0,outer sep=0] (base) at (0,0){%
-     \invisiblesearchable{%
+     \invisiblesearchable{% 
        \resizebox{\wd0}{\ht0}{\replacegreek{#1}}%
      }%
    };
@@ -250,6 +252,8 @@ end
 \setlength{\headheight}{22pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+\setlength{\topskip}{0pt}
 
 \setlist[itemize]{noitemsep, topsep=6pt}
 
