@@ -169,7 +169,7 @@ This project is a high-quality LuaLaTeX compilation of Haidut's writings posted 
 <h3>📋 Prerequisites:</h3>
 
 - A TeX distribution (i.e., MiKTeX, or TeX Live for the `tlmgr` command).
-- Python 3 (optional, requires the `fitz` package).
+- Python 3 (optional, requires the `pymupdf` package).
 
 <h3>🔧 Required LaTeX Packages:</h3>
 
