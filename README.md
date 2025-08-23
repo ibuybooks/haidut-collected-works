@@ -149,29 +149,43 @@ This project is a high-quality LuaLaTeX compilation of Haidut's work posted on t
 - **Figures, Tables, and Images:**
   Embedded all referrenced figures, tables (as images), and other relevant images into all of the articles, for quick access.
 
-- **Searchable Greek Letters:**
+- **Searchable Greek Alphabet:**
   A custom implimentation allows cross-viewer/platform searching of both actual Greek characters and their English counterparts (e.g., "TNF-α," "TNF-alpha," and "TNF-a" are all valid, and will yield the same results).
+
+<h3>🚧 Roadmap:</h3>
+
+- Include relevant user discussion (start with Haidut's replies, and build a chain backwards).
+- Include images and/or attachments (excluded for now due to copyright concerns).
 
 <h3>🔖 Notes:</h3>
 
-- Standard 8.5"x11" paper size.
-- 12 volumes, 2013-2024.
+- Standard 8.5ʺx11ʺ paper size.
+- 13 volumes, 2013-2024 (plus master).
 
 <div align="center">
   <h2>🛠️ Build Instructions</h2>
 </div>
 
-<h3>🔧 Required LaTeX Packages</h3>
+<h3>📋 Prerequisites:</h3>
 
-The following packages are required and should be installed through your LaTeX distribution's package manager:
+- A TeX distribution (i.e., MiKTeX, or TeX Live for the `tlmgr` command).
+- Python 3 (optional, requires the `fitz` package).
+
+<h3>🔧 Required LaTeX Packages:</h3>
+
+Ensure `tlmgr` and all installed packages are up-to-date:
 
 ```bash
-babel, csquotes, microtype, fontspec, xparse, lua-ul, graphicx, adjustbox, tufte-latex,
-xurl, extdash, hyperref, fancyhdr, changepage, makeidx, xstring, titlesec, tcolorbox,
-chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicode-math,
+tlmgr update --self --all
 ```
 
-<h3>🏗️ Compilation Process</h3>
+Install the required packages:
+
+```bash
+tlmgr install babel csquotes microtype fontspec xparse lua-ul graphicx adjustbox xurl extdash hyperref fancyhdr changepage makeidx xstring titlesec tcolorbox chemfig luacode luacolor tikz chngcntr enumitem etoolbox truncate unicode-math tufte-latex
+```
+
+<h3>🏗️ Compilation:</h3>
 
 >[!NOTE]
 > **COMMAND-LINE ARGUMENT REQUIRED**
@@ -179,8 +193,8 @@ chemfig, luacode, luacolor, tikz, chngcntr, etoolbox, truncate, biblatex, unicod
 > The compilation requires a year argument between 2013-2024. This determines which volume to build.
 
 ```bash
-# Unzip Articles (Compressed for GitHub)
-unzip Articles/$YEAR/Articles.zip
+# Unzip Articles
+unzip Articles/$YEAR/Articles.zip -d Articles/$YEAR/
 rm Articles/$YEAR/Articles.zip
 
 # First LuaLaTeX Compilation
@@ -201,6 +215,6 @@ lualatex CollectedWorks $YEAR
 # Fourth LuaLaTeX Compilation
 lualatex CollectedWorks $YEAR
 
-# Remove Extra Blank Pages
+# Remove Extra Blank Pages (Optional)
 python3 Scripts/Remove-Blank-Pages.py CollectedWorks.pdf
 ```
