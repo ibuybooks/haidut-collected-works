@@ -102,7 +102,7 @@
 
 <h3>📎 About:</h3>
 
-This project is a high-quality LuaLaTeX compilation of Haidut's work posted on the Ray Peat Forum, from the years 2013-2024.
+This project is a high-quality LuaLaTeX compilation of Haidut's writings posted on the Ray Peat Forum, from the years 2013-2024.
 
 <h3>📏 Improvements:</h3>
 
