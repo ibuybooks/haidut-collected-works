@@ -161,6 +161,7 @@ This project is a high-quality LuaLaTeX compilation of Haidut's writings posted 
 
 - Standard 8.5ʺx11ʺ paper size.
 - 13 volumes, 2013-2024 (plus master).
+- Master volume is missing bookmarks and index. (Not sure if this can be fixed?)
 
 <div align="center">
   <h2>🛠️ Build Instructions</h2>
