@@ -39,7 +39,7 @@
   [![Download Master][Master-Badge]][Master-Link]
 
   [Master-Badge]: https://img.shields.io/badge/📚_Download_Master_Collection-4f46e5?style=for-the-badge&logo=github&logoColor=white&labelColor=4b5563
-  [Master-Link]: #
+  [Master-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/master-v1-final/Haidut.-.The.Collected.Works.Volume.I-XII.2013-2024.pdf
   
   <h3>Download Individual Volumes</h3>
   <p>Select a Volume by Year.</p>
