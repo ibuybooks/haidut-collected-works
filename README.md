@@ -64,29 +64,29 @@
   </div>
 
   [2013-Badge]: https://img.shields.io/badge/2013-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2013-Link]: #
+  [2013-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2013-v1-final/2013.pdf
   [2014-Badge]: https://img.shields.io/badge/2014-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2014-Link]: #
+  [2014-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2014-v1-final/2014.pdf
   [2015-Badge]: https://img.shields.io/badge/2015-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2015-Link]: #
+  [2015-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2015-v1-final/2015.pdf
   [2016-Badge]: https://img.shields.io/badge/2016-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2016-Link]: #
+  [2016-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2016-v1-final/2016.pdf
   [2017-Badge]: https://img.shields.io/badge/2017-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2017-Link]: #
+  [2017-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2017-v1-final/2017.pdf
   [2018-Badge]: https://img.shields.io/badge/2018-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2018-Link]: #
+  [2018-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2018-v1-final/2018.pdf
   [2019-Badge]: https://img.shields.io/badge/2019-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2019-Link]: #
+  [2019-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2019-v1-final/2019.pdf
   [2020-Badge]: https://img.shields.io/badge/2020-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2020-Link]: #
+  [2020-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2020-v1-final/2020.pdf
   [2021-Badge]: https://img.shields.io/badge/2021-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2021-Link]: #
+  [2021-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2021-v1-final/2021.pdf
   [2022-Badge]: https://img.shields.io/badge/2022-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2022-Link]: #
+  [2022-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2022-v1-final/2022.pdf
   [2023-Badge]: https://img.shields.io/badge/2023-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2023-Link]: #
+  [2023-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2023-v1-final/2023.pdf
   [2024-Badge]: https://img.shields.io/badge/2024-4f46e5?style=for-the-badge&logo=document&logoColor=white
-  [2024-Link]: #
+  [2024-Link]: https://github.com/ibuybooks/haidut-collected-works/releases/download/2024-v1-final/2024.pdf
 
   <sup>📖 See the RELEASES tab for more information.</sup>
 </div>
